@@ -24,16 +24,16 @@ def update_display():
     text = PapirusTextPos(False)
 
     outdoor_temperature = data['outdoor']['temperature'] + '\u00B0'
-    indoor_temperature = data['indoor']['temperature'] + '\u00B0'
+    office_temperature = data['office']['temperature'] + '\u00B0'
 
     outdoor_humidity = data['outdoor']['humidity'] + '%'
-    indoor_humidity = data['indoor']['humidity'] + '%'
+    office_humidity = data['office']['humidity'] + '%'
 
     text.AddText(outdoor_temperature, 6, -12, size=112, fontPath=font)
     text.AddText(outdoor_humidity, 180, 26, size=64, fontPath=font)
 
-    text.AddText(indoor_temperature, 6, 82, size=112, fontPath=font)
-    text.AddText(indoor_humidity, 180, 118, size=64, fontPath=font)
+    text.AddText(office_temperature, 6, 82, size=112, fontPath=font)
+    text.AddText(office_humidity, 180, 118, size=64, fontPath=font)
 
     # Once we've got everything in place, _then_ update the entire screen at once
     text.WriteAll()
